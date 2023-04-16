@@ -1,0 +1,130 @@
+:root {
+    --text-color: #2d2d2d;
+    --bg-color: #3cd6d2;
+    --light-color: #9df2f9;
+    --accent-color: #efbe22;
+    --dark-color: rgb(3, 42, 60);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    /* font-weight: normal; */
+    line-height: 1.1;
+    /* margin: 0 1rem; */
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    /* font-weight: normal; */
+    line-height: 1.1;
+    /* margin: 0 1rem .5rem; */
+}
+
+p {
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    /* margin: 0 1rem 1rem; */
+}
+
+main {
+    padding: 2rem;
+    margin: 2rem auto 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: min(1200px, 90%);
+}
+
+article.card {
+    background-color: var(--light-color);
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+    border-radius: 1rem;
+}
+
+/* article.card h1,
+article.card h2,
+article.card p,
+article.card a,
+article.card i {
+    padding: 1rem;
+} */
+
+article.card :is(h1, h2, p, a, i) {
+    padding: 1rem;
+    color: purple;
+}
+
+/* article.card :where(h1, h2, p, a, i) {
+    padding: 1rem;
+    color: purple;
+} */
+
+article.card img {
+    max-width: 50%;
+    height: auto;
+    /* width: 100%; */
+    border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
+}
+
+article.card a {
+    text-decoration: none;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+
+article.card a:hover {
+    color: #aa4a0e;
+}
+
+article.card a::after {
+    content: '\f0da';
+    display: inline-block;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+/*
+
+.cardContent p:last-of-type {
+    text-align: right;
+    border-top: dotted 1px var(--bg-color);
+    padding-top: .25rem;
+}
+
+p:first-of-type::first-letter {
+    font-weight: bold;
+    font-family: Georgia, serif;
+    font-size: 4.5rem;
+    color: var(--bg-color);
+    float: left;
+    line-height: .9;
+    padding: 4px 6px 0 0;
+} */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fa-solid {
+    font-size: 4rem;
+    color: var(--bg-color);
+    text-shadow: 2px 2px 2px rgba(3, 42, 60, .8);
+}
